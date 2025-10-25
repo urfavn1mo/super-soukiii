@@ -1,0 +1,144 @@
+ * {
+     font-family: "Bitcount Grid Single", system-ui;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style: normal;
+ }
+
+ body {
+     height: 100vh;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-image: url('back.jpg');
+     background-size: cover;
+     background-position: center;
+     font-family: "Bitcount Grid Single", system-ui;
+ }
+
+
+ h1 {
+    color: rgb(255, 0, 0);
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(18, 1, 255), 0 0 20px rgb(0, 0, 0);
+    margin-bottom: 30px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgb(18,1,255), 0 0 20px rgb(0,0,0); }
+    100% { text-shadow: 0 0 20px rgb(18,1,255), 0 0 40px rgb(0,0,0); }
+}
+
+
+ .content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+ }
+
+ h2 {
+     color: rgb(0, 0, 0);
+     font-size: 35px;
+     text-align: center;
+     text-shadow: 0 0 5px rgb(255, 0, 0);
+ }
+
+ p {
+     color: rgb(0, 0, 0);
+     font-size: 20px;
+     text-align: center;
+ }
+ h2, p {
+    transition: all 0.3s ease;
+}
+
+h2:hover, p:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px red;
+}
+
+
+button {
+    background-color: #0a0a5e;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 18px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5), 0 0 30px rgba(0,0,0,0.2) inset;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a1aff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #fff, 0 0 40px #1a1aff inset;
+    letter-spacing: 4px;
+}
+
+ img {
+     width: 256px;
+     height: 256px;
+     object-fit: cover;
+     margin-bottom: 20px;
+     border-radius: 12px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+ .play, .settings, .exit, button {
+    background-color: #0a0a5e;      
+    color: #fff;
+    border: 2px solid #fff;     
+    padding: 18px 40px;              
+    font-size: 22px;                 
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5), 0 0 30px rgba(0,0,0,0.2) inset;
+    transition: all 0.3s ease;
+     box-shadow: 0 0 20px rgba(0,0,0,0.5), 0 0 50px rgba(0,0,255,0.2) inset;
+}
+
+.play:hover, .settings:hover, .exit:hover, button:hover {
+    background-color: #1a1aff;       
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #fff, 0 0 40px #1a1aff inset; 
+    letter-spacing: 4px;
+}
+
+
+ .buttons {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 30px;
+     height: 100%;
+ }
+ @keyframes buttonBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.play, .settings, .exit {
+    animation: buttonBounce 2s infinite;
+}
